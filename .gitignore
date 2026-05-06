@@ -1,0 +1,11 @@
+
+# dependencies
+node_modules
+venv
+backend/.env
+
+# testing
+/coverage
+
+# production
+/build

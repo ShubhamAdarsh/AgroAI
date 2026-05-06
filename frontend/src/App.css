@@ -1,0 +1,183 @@
+/* 🌌 GLOBAL BACKGROUND */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 🌠 ANIMATED BACKGROUND GLOW */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle, rgba(34,197,94,0.15), transparent 60%);
+  animation: pulseGlow 8s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes pulseGlow {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.2); opacity: 0.8; }
+}
+
+/* ✨ SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🧊 GLASS EFFECT (UPGRADED) */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* 🌈 GRADIENT TEXT */
+.gradient-text {
+  background: linear-gradient(90deg, #22c55e, #3b82f6, #22c55e);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 4s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+/* 🔥 GLOW EFFECT */
+.glow {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+}
+
+/* 🎯 BUTTON (UPGRADED) */
+.button-primary {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.button-primary:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.7);
+}
+
+/* ✨ BUTTON SHIMMER EFFECT */
+.button-primary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: 0.5s;
+}
+
+.button-primary:hover::after {
+  left: 100%;
+}
+
+/* 🧠 CARD STYLE */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ✨ INPUT FIELD */
+.input-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-box:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.5);
+}
+
+/* 🌊 FLOAT ANIMATION */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* 🎬 SCROLL REVEAL (UPGRADED) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✨ SCALE-IN ANIMATION */
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 🌌 SCROLLBAR (PREMIUM TOUCH) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#22c55e, #3b82f6);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dots::after {
+  content: "";
+  animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0% { content: ""; }
+  33% { content: "."; }
+  66% { content: ".."; }
+  100% { content: "..."; }
+}
